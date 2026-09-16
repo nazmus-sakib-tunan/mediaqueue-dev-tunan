@@ -31,7 +31,7 @@ const Navbar = () => {
           </Link>
 
           <Link
-            href="/tutors"
+            href="/Tutors"
             className="text-sm font-medium text-slate-700 transition hover:text-blue-600"
           >
             Tutors

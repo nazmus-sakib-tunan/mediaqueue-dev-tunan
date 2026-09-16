@@ -32,14 +32,14 @@ const Hero = () => {
           <div className="mt-7 flex flex-col gap-3 xs:flex-row sm:mt-8 sm:flex-row sm:gap-4">
 
             <Link
-              href="/tutors"
+              href="/Tutors"
               className="rounded-lg bg-slate-900 px-6 py-3 text-center text-sm font-semibold text-white transition hover:bg-blue-600"
             >
               Find a Tutor
             </Link>
 
             <Link
-              href="/become-tutor"
+              href="/becomeTutors"
               className="rounded-lg border border-slate-300 px-6 py-3 text-center text-sm font-semibold text-slate-700 transition hover:border-blue-600 hover:text-blue-600"
             >
               Become a Tutor
