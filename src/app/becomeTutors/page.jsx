@@ -1,6 +1,6 @@
 "use client";
 import { Button, FieldError, Input, Label, ListBox, TextArea, TextField, Select } from '@heroui/react';
-import Navbar from '../components/Navbar';
+
 
 const BecomeTutor = () => {
   const onSubmit = async(e) => {
@@ -26,7 +26,7 @@ const BecomeTutor = () => {
  
   return (
     <div>
-      <Navbar/>
+     
       
 <div className="min-h-screen bg-slate-50 px-4 py-12 sm:px-6 lg:px-8">
   <div className="mx-auto w-full max-w-5xl">
