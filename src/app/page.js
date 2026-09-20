@@ -1,5 +1,6 @@
 
 import Hero from "./components/Hero";
+import PlatformStats from "./components/PlatformStats";
 
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <div>
     
       <Hero />
+      <PlatformStats/>
       
     </div>
   );

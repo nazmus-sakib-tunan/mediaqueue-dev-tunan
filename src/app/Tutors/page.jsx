@@ -1,9 +1,10 @@
+import Link from "next/link";
 
 
 const FindTutor = async () => {
   const res = await fetch('http://localhost:5000/becomeTutors');
   const tutors = await res.json();
-  console.log(tutors)
+  // console.log(tutors)
 
 
   return (
@@ -117,11 +118,14 @@ const FindTutor = async () => {
                     </p>
                   </div>
 
+                  <Link href={`/Tutors/${tutor._id}`}>
+                  
                   <button
                     className="rounded-xl bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-600"
                   >
                     View Profile
-                  </button>
+                    </button>
+                  </Link>
                 </div>
 
               </div>
@@ -130,18 +134,7 @@ const FindTutor = async () => {
 
         </div>
 
-        {/* Empty State */}
-        {(!tutors || tutors.length === 0) && (
-          <div className="rounded-2xl border border-dashed border-slate-300 bg-white py-16 text-center">
-            <h3 className="text-lg font-semibold text-slate-800">
-              No tutors found
-            </h3>
-
-            <p className="mt-2 text-sm text-slate-500">
-              Try again later or search for another tutor.
-            </p>
-          </div>
-        )}
+       
 
       </div>
     </section>
