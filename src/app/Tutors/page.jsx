@@ -8,7 +8,7 @@ const FindTutor = async () => {
 
 
   return (
-     <section className="min-h-screen bg-slate-50 px-4 py-12 sm:px-6 lg:px-8">
+    <section className="min-h-screen bg-slate-50 px-4 py-12 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
 
         {/* Header */}
@@ -119,11 +119,11 @@ const FindTutor = async () => {
                   </div>
 
                   <Link href={`/Tutors/${tutor._id}`}>
-                  
-                  <button
-                    className="rounded-xl bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-600"
-                  >
-                    View Profile
+
+                    <button
+                      className="rounded-xl bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-600"
+                    >
+                      View Profile
                     </button>
                   </Link>
                 </div>
@@ -134,7 +134,7 @@ const FindTutor = async () => {
 
         </div>
 
-       
+
 
       </div>
     </section>

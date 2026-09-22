@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav className="w-full border-b border-slate-200 bg-white">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8">
-        
+
         {/* Logo / Brand */}
         <Link href="/" className="flex items-center gap-2">
           <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-slate-900 text-sm font-bold text-white">
@@ -48,10 +48,10 @@ const Navbar = () => {
         {/* Auth Buttons */}
         <div className="flex items-center gap-3">
           <Link
-            href="/signin"
+            href="/signup"
             className="hidden text-sm font-medium text-slate-700 transition hover:text-blue-600 sm:block"
           >
-            Sign In
+            Sign Up
           </Link>
 
           <Link
