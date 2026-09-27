@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { Card } from "@heroui/react";
+import { Card, Separator } from "@heroui/react";
 import { Check } from "@gravity-ui/icons";
 import {
   Button,
@@ -13,6 +13,7 @@ import {
   TextField,
 } from "@heroui/react";
 import { authClient } from "@/lib/auth-client";
+import { FcGoogle } from "react-icons/fc";
 
 const SignUpPage = () => {
   const router = useRouter();
@@ -40,6 +41,11 @@ const SignUpPage = () => {
       alert(error.message);
     }
   };
+  const handleGoogleSignIn = async () => {
+    await authClient.signIn.social({
+      provider: "google"
+    })
+  }
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-slate-50 via-white to-blue-50 px-4 py-10">
@@ -173,13 +179,21 @@ const SignUpPage = () => {
               <div className="flex gap-3 pt-2">
                 <Button
                   type="submit"
-                  className="h-11 flex-1 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-sm font-semibold text-white shadow-md shadow-blue-500/20 transition-all duration-200 hover:-translate-y-0.5 hover:from-blue-700 hover:to-indigo-700 hover:shadow-lg"
+                  className="h-11 flex-1 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-sm font-semibold text-white shadow-md shadow-blue-500/20 transition-all duration-200 hover:-translate-y-0.5 hover:from-blue-700 hover:to-indigo-700 hover:shadow-lg"
                 >
                   <Check />
                   Submit
                 </Button>
               </div>
             </Form>
+            <div>
+              <div className="flex justify-center items-center gap-3">
+                <Separator />
+                <div className="whitespace-nowrap text-gray-500">Or sign with</div>
+                <Separator />
+              </div>
+              <Button onClick={handleGoogleSignIn} className="mt-2 w-full bg-white text-black border border-black hover:-translate-y-0.5"> <FcGoogle />Sign in With Google</Button>
+            </div>
 
 
             <p className="mt-6 text-center text-xs text-slate-400">

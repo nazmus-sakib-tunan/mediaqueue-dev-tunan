@@ -1,10 +1,24 @@
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
 
 const FindTutor = async () => {
   const res = await fetch('http://localhost:5000/becomeTutors');
   const tutors = await res.json();
-  // console.log(tutors)
+  console.log(tutors)
+
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+
+  // Not logged in → Sign In page
+  if (!session?.user) {
+    redirect("/signup");
+  }
+
+
 
 
   return (
