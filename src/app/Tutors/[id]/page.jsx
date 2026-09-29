@@ -231,7 +231,7 @@ const TutorDetailsPage = async ({ params }) => {
                 </div>
 
                 <div>
-                  <BookingTutor />
+                  <BookingTutor tutor={tutor} />
                 </div>
 
               </div>
